@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Bloom Market</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">Bloom Market</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html" class="active">About</a>
+    <a href="contact.html">Contact</a>
+    <button class="cart-button" onclick="toggleCart()">Cart (<span id="cart-count">0</span>)</button>
+  </nav>
+</header>
+
+<h1 class="page-title">About Bloom Market</h1>
+
+<section class="section">
+  <div class="about-text">
+    <p>Bloom Market started as a single weekend stall selling vegetables from two family farms. Today we deliver fresh produce, baked goods, and pantry staples across the neighbourhood, but the idea hasn't changed: good food, picked at its best, sold at a fair price.</p>
+    <p>We keep our range small on purpose. Instead of stocking everything, we stock what's in season and what we'd happily put on our own tables. Every item in the shop is chosen by hand, and most of it travels less than fifty kilometres to reach you.</p>
+    <p>When you order from us, you're supporting a network of small growers, bakers, and makers who care about what they produce. Thank you for being part of it.</p>
+  </div>
+</section>
+
+<div class="cart-panel" id="cart-panel">
+  <div class="cart-header">
+    <h2>Your Cart</h2>
+    <button class="close-button" onclick="toggleCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-footer">
+    <div class="total">
+      <span>Total</span>
+      <span id="cart-total">$0.00</span>
+    </div>
+    <button class="checkout-button" onclick="checkout()">Checkout</button>
+  </div>
+</div>
+
+<footer>© 2026 Bloom Market. Made with care.</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

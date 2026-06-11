@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bloom Market — Fresh picks, fair prices</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">Bloom Market</a>
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <button class="cart-button" onclick="toggleCart()">Cart (<span id="cart-count">0</span>)</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <span class="emoji">🧺</span>
+  <h1>Fresh picks, fair prices</h1>
+  <p>A small neighbourhood market for everyday greens and goodies, delivered to your door.</p>
+  <a href="shop.html" class="button">Shop now</a>
+</section>
+
+<section class="section">
+  <h2 class="section-title">Why shop with us</h2>
+  <div class="features">
+    <div class="feature">
+      <div class="icon">🌱</div>
+      <h3>Locally sourced</h3>
+      <p>We work directly with small farms so everything arrives fresh and in season.</p>
+    </div>
+    <div class="feature">
+      <div class="icon">🚲</div>
+      <h3>Same-day delivery</h3>
+      <p>Order before noon and your basket arrives at your door by evening.</p>
+    </div>
+    <div class="feature">
+      <div class="icon">💛</div>
+      <h3>Fair prices</h3>
+      <p>No middlemen and no markups. Good food should be affordable for everyone.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">Featured this week</h2>
+  <div class="products" id="featured"></div>
+</section>
+
+<div class="cart-panel" id="cart-panel">
+  <div class="cart-header">
+    <h2>Your Cart</h2>
+    <button class="close-button" onclick="toggleCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-footer">
+    <div class="total">
+      <span>Total</span>
+      <span id="cart-total">$0.00</span>
+    </div>
+    <button class="checkout-button" onclick="checkout()">Checkout</button>
+  </div>
+</div>
+
+<footer>© 2026 Bloom Market. Made with care.</footer>
+
+<script src="js/script.js"></script>
+<script>
+renderProducts("featured", products.slice(0, 4));
+</script>
+
+</body>
+</html>

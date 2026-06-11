@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop — Bloom Market</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">Bloom Market</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="shop.html" class="active">Shop</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <button class="cart-button" onclick="toggleCart()">Cart (<span id="cart-count">0</span>)</button>
+  </nav>
+</header>
+
+<h1 class="page-title">Shop everything</h1>
+<p class="page-subtitle">Picked this morning, on your table tonight.</p>
+
+<section class="section">
+  <div class="products" id="all-products"></div>
+</section>
+
+<div class="cart-panel" id="cart-panel">
+  <div class="cart-header">
+    <h2>Your Cart</h2>
+    <button class="close-button" onclick="toggleCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-footer">
+    <div class="total">
+      <span>Total</span>
+      <span id="cart-total">$0.00</span>
+    </div>
+    <button class="checkout-button" onclick="checkout()">Checkout</button>
+  </div>
+</div>
+
+<footer>© 2026 Bloom Market. Made with care.</footer>
+
+<script src="js/script.js"></script>
+<script>
+renderProducts("all-products", products);
+</script>
+
+</body>
+</html>
