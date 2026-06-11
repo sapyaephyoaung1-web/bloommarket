@@ -6,10 +6,13 @@ const products = [
   { id: 5, name: "Honey Jar", price: 7.20, emoji: "🍯" },
   { id: 6, name: "Basil Plant", price: 4.50, emoji: "🌿" },
   { id: 7, name: "Tomatoes", price: 3.00, emoji: "🍅" },
-  { id: 8, name: "Cheese Wedge", price: 6.40, emoji: "🧀" }
+  { id: 8, name: "Cheese Wedge", price: 6.40, emoji: "🧀 " }
+
+
 ];
 
 let cart = loadCart();
+
 
 function loadCart() {
   const saved = localStorage.getItem("bloomCart");
